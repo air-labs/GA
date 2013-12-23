@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3CEE9753-858B-4BBF-9276-CB4166189010}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AIRLab.Thornado</RootNamespace>
+    <AssemblyName>AIRLab.Thornado</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ForEach.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Files\Files\CurrentIndex.cs" />
+    <Compile Include="Files\Files\INI.cs" />
+    <Compile Include="Files\Files\IO.cs" />
+    <Compile Include="Files\Files\IOProvider.cs" />
+    <Compile Include="Files\Files\String.cs" />
+    <Compile Include="Files\Files\XML.cs" />
+    <Compile Include="Formats\Architecture\WrongFormatException.cs" />
+    <Compile Include="Formats\Implementation\Custom.cs" />
+    <Compile Include="Formats\Implementation\DateTime.cs" />
+    <Compile Include="Formats\Implementation\VeryBasic.cs" />
+    <Compile Include="Formats\Architecture\BasicTypeFormat.cs" />
+    <Compile Include="Formats\Architecture\PrimaryFormatAttribute.cs" />
+    <Compile Include="Formats\Architecture\TypeFormat.cs" />
+    <Compile Include="Formats\Architecture\TypeFormat{T}.cs" />
+    <Compile Include="Formats\Implementation\Formats.cs" />
+    <Compile Include="Formats\Implementation\Primitives.cs" />
+    <Compile Include="Resolvers\Addresses\ExpressionToAddressConverter.cs" />
+    <Compile Include="Resolvers\Addresses\ListAndDictExtensions.cs" />
+    <Compile Include="Resolvers\AD\ADCache.cs" />
+    <Compile Include="Resolvers\AD\ADSpecification.cs" />
+    <Compile Include="Resolvers\AD\IADAttribute.cs" />
+    <Compile Include="Resolvers\AD\ThornadoAttribute.cs" />
+    <Compile Include="Resolvers\Categories.cs" />
+    <Compile Include="Resolvers\Consistancy\Enums.cs" />
+    <Compile Include="Resolvers\Consistancy\Exceptions.cs" />
+    <Compile Include="Resolvers\Consistancy\ICheckable.cs" />
+    <Compile Include="Resolvers\Consistancy\LogicError.cs" />
+    <Compile Include="Resolvers\Consistancy\LogicErrorList.cs" />
+    <Compile Include="Resolvers\Addresses\FieldAddress.cs" />
+    <Compile Include="Resolvers\TypeResolver\ClassResolver\ConstructorData.cs" />
+    <Compile Include="Resolvers\TypeResolver\ClassResolver\FieldScan.cs" />
+    <Compile Include="Resolvers\TypeResolver\ClassResolver\ClassResolver.cs" />
+    <Compile Include="Resolvers\TypeResolver\Implementations\DictionaryResolver.cs" />
+    <Compile Include="Resolvers\TypeResolver\Implementations\FieldResolver.cs" />
+    <Compile Include="Resolvers\TypeResolver\Implementations\ListResolver.cs" />
+    <Compile Include="Resolvers\TypeResolver\Overrides.cs" />
+    <Compile Include="Resolvers\TypeResolver\Static methods.cs" />
+    <Compile Include="Resolvers\TypeResolver\Tensors\TensorIntermediateType.cs" />
+    <Compile Include="Resolvers\TypeResolver\Tensors\TensorResolver.cs" />
+    <Compile Include="Resolvers\TypeResolver\TextMold\Resolver methods.cs" />
+    <Compile Include="Resolvers\TypeResolver\TextMold\TextMold.cs" />
+    <Compile Include="Resolvers\TypeResolver\TextMold\TextMoldRoot.cs" />
+    <Compile Include="Resolvers\TypeResolver\Virtual methods.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resolvers\TypeResolver\Constructors\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

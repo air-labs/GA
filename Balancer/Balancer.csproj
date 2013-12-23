@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2F361DE4-26FA-4BFD-8AF4-8E045AE18845}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Balancer</RootNamespace>
+    <AssemblyName>Balancer</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DoubleApproximationAssembler.cs" />
+    <Compile Include="DoubleBulldozerBalancer.cs" />
+    <Compile Include="Point.cs" />
+    <Compile Include="StatisticItem.cs" />
+    <Compile Include="Balancer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimpleParser.cs" />
+    <Compile Include="Task.cs" />
+    <Compile Include="FormulaGenerator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AIRLab\AIRLab.csproj">
+      <Project>{3CEE9753-858B-4BBF-9276-CB4166189010}</Project>
+      <Name>AIRLab</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bulldozer\Bulldozer.csproj">
+      <Project>{C0CCD388-7D80-4A15-ACDB-C55BA6972279}</Project>
+      <Name>Bulldozer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ComputerAlgebra\ComputerAlgebra.csproj">
+      <Project>{4C4EA496-89A1-4FE1-B18C-28E2577A2151}</Project>
+      <Name>ComputerAlgebra</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeneticAlgorithms\GenericAlgorithms.csproj">
+      <Project>{F4D3519E-7891-4A76-B835-FBF164929B14}</Project>
+      <Name>GenericAlgorithms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,29 @@
+_ReSharper.Eurobot
+bin
+obj
+*.suo
+*.user
+*.userprefs
+/TestResults
+
+
+/*.psess
+/*.vsp
+<<<<<<< HEAD
+/packages/NLog.2.0.1.2
+/packages/NLog.Config.2.0.1.2
+/packages/NLog.Schema.2.0.1.2
+/packages/log4net.2.0.0/lib/net10-full
+/packages/log4net.2.0.0/lib/net11-full/*.dll
+/packages/log4net.2.0.0/lib/net11-full
+*.opdump
+=======
+
+packages/BookSleeve.1.3.35/lib/BookSleeve.xml
+packages/BookSleeve.1.3.35/lib/license.txt
+packages/NUnit.2.6.2/lib/nunit.framework.xml
+packages/NUnit.2.6.2/license.txt
+bin
+obj
+*.suo
+>>>>>>> remotes/origin/CalibrationAndSetUp

@@ -1,0 +1,43 @@
+﻿<Window      x:Class="Bulldozer.BulldozerWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Title="WpfGA" 
+             Width="600"
+             MinWidth="600"
+             SizeToContent="Height"
+             Loaded="WindowLoaded"
+             Closed="WindowClosed">
+    <StackPanel>
+        <GroupBox Header="Pool Sample" Name="PoolPanel">
+        </GroupBox>
+        <GroupBox Header="GA Numbers">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="Iterations:"></Label>
+                <Label Grid.Row="0" Grid.Column="1" Name="Iterations"></Label>
+                <Label Grid.Row="1" Grid.Column="0" Content="Average value:"></Label>
+                <Label Grid.Row="1" Grid.Column="1" Name="AverageValue"></Label>
+                <Label Grid.Row="2" Grid.Column="0" Content="Average age:"></Label>
+                <Label Grid.Row="2" Grid.Column="1" Name="AverageAge"></Label>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Optional controls" Name="OptionalPanel">
+        </GroupBox>
+        <GroupBox Header="Controls">
+        	<StackPanel>
+        		<Button Name="Pause" Content="Pause" Click="PauseClick"></Button>
+        		<Button Name="Resume" Content="Resume" Click="ResumeClick"></Button>
+        		<Button Name="Refresh" Content="Refresh" Click="RefreshClick"></Button>
+        		<Button Name="Close" Content="Close" Click="CloseClick"></Button>
+        	</StackPanel>
+        </GroupBox>
+    </StackPanel>
+</Window>
